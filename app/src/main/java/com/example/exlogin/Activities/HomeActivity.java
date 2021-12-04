@@ -13,6 +13,7 @@ import android.view.WindowManager;
 
 import com.example.exlogin.Navfragments.DashboardFragment;
 import com.example.exlogin.Navfragments.ProfileFragment;
+import com.example.exlogin.Navfragments.SearchFragment;
 import com.example.exlogin.Navfragments.UserFragment;
 import com.example.exlogin.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -54,6 +55,11 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.dashboard:
                         fragmentTransaction.replace(R.id.relativelayout, new DashboardFragment());
+                        break;
+
+                    case R.id.search:
+                        fragmentTransaction.replace(R.id.relativelayout, new SearchFragment());
+
                         break;
                     case R.id.users:
                         fragmentTransaction.replace(R.id.relativelayout, new UserFragment());
